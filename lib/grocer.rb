@@ -12,7 +12,10 @@ def find_item_by_name_in_collection(name, collection)
 end
 
 def consolidate_cart(cart)
- 
+ cart.each do |food_item|
+   binding.pry
+   food_item.merge({:count => nil})
+ end
 end
 
 
