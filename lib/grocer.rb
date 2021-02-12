@@ -15,8 +15,18 @@ def consolidate_cart(cart)
  consolidated_cart = []
  cart.each do |food_item|
   current_food_item = find_item_by_name_in_collection(food_item[:item], consolidated_cart)
-  binding.pry
- end 
+  if current_food_item
+    consolidated_cart.each do |new_food_item|
+      if new_food_item[:item] == current_food_item[:item]
+        new_food_item[:count] += 1
+      end
+    end
+  else
+    food_item[:count] = 1
+    consolidated_cart << food_item
+  end
+ end
+ consolidated_cart
 end
 
 
