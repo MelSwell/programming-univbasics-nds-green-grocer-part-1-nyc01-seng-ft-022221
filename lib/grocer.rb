@@ -16,6 +16,7 @@ def consolidate_cart(cart)
    food_item.merge!({:count => nil})
    binding.pry
  end
+ 
 end
 
 
