@@ -31,4 +31,5 @@ end
 
 puts consolidate_cart([{:item => "AVOCADO", :price => 3.00, :clearance => true},
       {:item => "KALE", :price => 3.00, :clearance => false},
-      {:item => "BLACK_BEANS", :price => 2.50, :clearance => false}])
+      {:item => "BLACK_BEANS", :price => 2.50, :clearance => false},
+      {:item => "AVOCADO", :price => 3.00, :clearance => true}])
