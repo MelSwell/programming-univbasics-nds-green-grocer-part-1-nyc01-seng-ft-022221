@@ -12,8 +12,9 @@ def find_item_by_name_in_collection(name, collection)
 end
 
 def consolidate_cart(cart)
+  consolidated_cart = []
  cart.each do |food_item|
-   food_item.merge!({:count => nil})
+   consolidated_cart << food_item.merge!({:count => nil})
    binding.pry
  end
  
