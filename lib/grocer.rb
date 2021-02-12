@@ -29,4 +29,6 @@ def consolidate_cart(cart)
  consolidated_cart
 end
 
-
+puts consolidated_cart({:item => "AVOCADO", :price => 3.00, :clearance => true},
+      {:item => "KALE", :price => 3.00, :clearance => false},
+      {:item => "BLACK_BEANS", :price => 2.50, :clearance => false},)
