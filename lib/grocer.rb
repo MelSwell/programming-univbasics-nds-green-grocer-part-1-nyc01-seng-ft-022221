@@ -14,7 +14,7 @@ end
 def consolidate_cart(cart)
  consolidated_cart = []
  cart.each do |food_item|
-  current_food_item = find_item_by_name_in_collection(food_item[:name], cart)
+  current_food_item = find_item_by_name_in_collection(food_item[:item], cart)
   binding.pry
  end 
 end
