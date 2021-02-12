@@ -13,7 +13,7 @@ end
 
 def consolidate_cart(cart)
  cart.each do |food_item|
-   food_item.merge({:count => nil})
+   food_item.merge!({:count => nil})
    binding.pry
  end
 end
