@@ -14,12 +14,9 @@ end
 def consolidate_cart(cart)
  consolidated_cart = []
  cart.each do |food_item|
-   consolidated_cart << food_item.merge({:count => 
-          
-      })
-   
- end
- binding.pry
+  current_food_item = find_item_by_name_in_collection(food_item[:name], cart)
+  binding.pry
+ end 
 end
 
 
