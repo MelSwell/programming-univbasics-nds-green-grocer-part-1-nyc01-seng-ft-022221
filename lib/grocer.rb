@@ -13,7 +13,7 @@ end
 
 def consolidate_cart(cart)
   consolidated_cart = cart.each_with_object([]) do |food_item, a|
-    food_item.each do |k, v|
+    food_item.each do
       binding.pry
       a << food_item
     end
