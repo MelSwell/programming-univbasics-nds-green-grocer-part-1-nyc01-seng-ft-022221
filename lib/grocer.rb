@@ -11,6 +11,7 @@ def find_item_by_name_in_collection(name, collection)
   result
 end
 
+=begin 
 def consolidate_cart(cart)
  consolidated_cart = []
  cart.each do |food_item|
@@ -21,6 +22,23 @@ def consolidate_cart(cart)
         binding.pry
         new_food_item[:count] += 1
       end
+    end
+  else
+    food_item[:count] = 1
+    consolidated_cart << food_item
+  end
+ end
+ consolidated_cart
+end
+=end
+
+def consolidate_cart(cart)
+ consolidated_cart = []
+ cart.each do |food_item|
+  current_food_item = find_item_by_name_in_collection(food_item[:item], consolidated_cart)
+  if current_food_item
+    consolidated_cart.each do |new_food_item|
+      new_food_item[:count] += 1
     end
   else
     food_item[:count] = 1
